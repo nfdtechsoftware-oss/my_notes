@@ -10,7 +10,13 @@ final notesNotifierProvider = AsyncNotifierProvider<NotesNotifier, List<Note>>((
 // Provider for searching notes
 final notesSearchProvider = Provider.family<List<Note>, String>((ref, query) {
   final notesAsync = ref.watch(notesNotifierProvider);
-  final notes = notesAsync.valueOrNull ?? [];
+
+  // Handle async state - return empty list if loading or error
+  final notes = notesAsync.when(
+    data: (data) => data,
+    loading: () => <Note>[],
+    error: (_, __) => <Note>[],
+  );
 
   if (query.isEmpty) return notes;
 
@@ -23,7 +29,13 @@ final notesSearchProvider = Provider.family<List<Note>, String>((ref, query) {
 // Provider for notes statistics
 final notesStatsProvider = Provider<Map<String, int>>((ref) {
   final notesAsync = ref.watch(notesNotifierProvider);
-  final notes = notesAsync.valueOrNull ?? [];
+
+  // Handle async state - return zeros if loading or error
+  final notes = notesAsync.when(
+    data: (data) => data,
+    loading: () => <Note>[],
+    error: (_, __) => <Note>[],
+  );
 
   return {
     'total': notes.length,
@@ -63,7 +75,7 @@ class NotesNotifier extends AsyncNotifier<List<Note>> {
 
   /// Add a new note with optimistic update
   Future<void> addNote(Note note) async {
-    final currentNotes = state.valueOrNull ?? [];
+    final currentNotes = state.hasValue ? state.requireValue : <Note>[];
     final tempId = DateTime.now().millisecondsSinceEpoch;
     final tempNote = note.copyWith(id: tempId);
 
@@ -89,7 +101,7 @@ class NotesNotifier extends AsyncNotifier<List<Note>> {
 
   /// Update an existing note with optimistic update
   Future<void> updateNote(Note note) async {
-    final currentNotes = state.valueOrNull ?? [];
+    final currentNotes = state.hasValue ? state.requireValue : <Note>[];
 
     final updatedNotes = currentNotes.map((n) {
       return n.id == note.id ? note : n;
@@ -109,7 +121,7 @@ class NotesNotifier extends AsyncNotifier<List<Note>> {
 
   /// Delete a note with optimistic update
   Future<void> deleteNote(int id) async {
-    final currentNotes = state.valueOrNull ?? [];
+    final currentNotes = state.hasValue ? state.requireValue : <Note>[];
 
     final updatedNotes = currentNotes.where((note) => note.id != id).toList();
 

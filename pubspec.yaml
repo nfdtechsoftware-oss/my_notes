@@ -20,7 +20,7 @@ dependencies:
     sdk: flutter
 
   # State Management
-  flutter_riverpod: ^2.5.1
+  flutter_riverpod: ^3.0.3
 
   # Navigation
   go_router: ^16.2.1
@@ -38,15 +38,18 @@ dependencies:
   # Animations
   flutter_staggered_animations: ^1.1.1
 
+  # Utilities
+  path: ^1.9.0
+
   # Environment Variables
-  flutter_dotenv: ^5.1.0
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # Linting
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
   # App Icons & Splash
   flutter_launcher_icons: ^0.14.1
