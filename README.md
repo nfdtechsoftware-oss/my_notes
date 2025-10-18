@@ -2,6 +2,8 @@
 
 Um aplicativo moderno e elegante de notas construído com Flutter, apresentando Material Design 3, internacionalização e arquitetura limpa.
 
+> **Nota**: Este é um repositório privado para desenvolvimento do aplicativo Minhas Notas.
+
 ## Recursos
 
 - **Gerenciamento de Notas**: Criar, visualizar, editar e excluir notas
@@ -50,15 +52,11 @@ lib/
 - Android Studio / VS Code
 - Emulador Android ou dispositivo físico
 
-## Instalação
+## Desenvolvimento
 
-1. **Clone o repositório**
-   ```bash
-   git clone <repository-url>
-   cd my_notes
-   ```
+### Setup do Ambiente
 
-2. **Instale as dependências**
+1. **Instale as dependências**
    ```bash
    flutter pub get
    ```
@@ -238,27 +236,19 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ---
 
-## Roadmap
+## Roadmap de Funcionalidades
 
-- [ ] Busca de notas por título/conteúdo
-- [ ] Categorias/Tags
-- [ ] Backup e sincronização na nuvem
-- [ ] Widget para tela inicial
-- [ ] Reconhecimento de voz
-- [ ] Suporte para anexar imagens
-- [ ] Modo de leitura noturno
-- [ ] Exportar notas (PDF, TXT)
+Lista de recursos planejados para futuras versões:
 
-## Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-1. Fork o projeto
-2. Crie sua feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'feat: add some amazing feature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+- [ ] **Busca Avançada**: Buscar notas por título e conteúdo
+- [ ] **Categorias/Tags**: Organizar notas com tags personalizadas
+- [ ] **Backup na Nuvem**: Sincronização automática com Google Drive
+- [ ] **Widget**: Widget para tela inicial do Android
+- [ ] **Nota por Voz**: Criar notas usando reconhecimento de voz
+- [ ] **Anexar Imagens**: Adicionar fotos às notas
+- [ ] **Exportar**: Exportar notas em PDF e TXT
+- [ ] **Temas Personalizados**: Mais opções de cores e temas
 
 ## Suporte
 
-Para suporte, entre em contato através de [seu-email@exemplo.com]
+Para suporte, entre em contato através de [nfdtechsoftware@gmail.com]
