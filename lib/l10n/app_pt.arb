@@ -215,5 +215,10 @@
         "type": "int"
       }
     }
+  },
+
+  "goHome": "Ir para o Início",
+  "@goHome": {
+    "description": "Botão para voltar à tela inicial"
   }
 }

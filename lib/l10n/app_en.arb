@@ -215,5 +215,10 @@
         "type": "int"
       }
     }
+  },
+
+  "goHome": "Go Home",
+  "@goHome": {
+    "description": "Button to go back to home screen"
   }
 }

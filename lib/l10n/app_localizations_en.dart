@@ -141,4 +141,7 @@ class AppLocalizationsEn extends AppLocalizations {
     );
     return '$count $_temp0';
   }
+
+  @override
+  String get goHome => 'Go Home';
 }

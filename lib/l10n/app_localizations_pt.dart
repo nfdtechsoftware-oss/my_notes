@@ -141,4 +141,7 @@ class AppLocalizationsPt extends AppLocalizations {
     );
     return '$count $_temp0';
   }
+
+  @override
+  String get goHome => 'Ir para o Início';
 }

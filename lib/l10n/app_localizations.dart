@@ -343,6 +343,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'{count} {count, plural, =0{notas} =1{nota} other{notas}}'**
   String noteCount(int count);
+
+  /// Botão para voltar à tela inicial
+  ///
+  /// In pt, this message translates to:
+  /// **'Ir para o Início'**
+  String get goHome;
 }
 
 class _AppLocalizationsDelegate

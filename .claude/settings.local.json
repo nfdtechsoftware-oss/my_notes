@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/natal/OneDrive/Desktop/PROJETOS/PORTIFOLIO/0-NFDTech/Apps/notes_app/**)",
+      "Bash(dir \"C:\\Users\\natal\\OneDrive\\Desktop\\PROJETOS\\PORTIFOLIO\\0-NFDTech\\Apps\\my_notes\")",
+      "Bash(dir \"C:\\Users\\natal\\OneDrive\\Desktop\\PROJETOS\\PORTIFOLIO\\0-NFDTech\\Apps\\my_notes\\lib\")",
+      "Bash(dir \"C:\\Users\\natal\\OneDrive\\Desktop\\PROJETOS\\PORTIFOLIO\\0-NFDTech\\Apps\\my_notes\\test\")",
+      "Bash(tree /L 2 /A)",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\Users\\natal\\OneDrive\\Desktop\\PROJETOS\\PORTIFOLIO\\0-NFDTech\\Apps\\my_notes'' -Depth 1 | Select-Object -Property Name, PSIsContainer | Format-Table -AutoSize\")",
+      "Bash(flutter pub get)",
+      "Bash(flutter gen-l10n)",
+      "Bash(dir \".dart_tool\\flutter_gen\\gen_l10n\")",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''lib\\core\\config''\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
