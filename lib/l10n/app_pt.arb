@@ -1,0 +1,23 @@
+{
+  "@@locale": "pt",
+
+  "appName": "Minhas Notas",
+  "@appName": {
+    "description": "Nome da aplicação"
+  },
+
+  "myNotes": "Minhas Notas",
+  "@myNotes": {
+    "description": "Título da tela principal"
+  },
+
+  "newNote": "Nova Nota",
+  "@newNote": {
+    "description": "Botão para criar nova nota"
+  },
+
+  "loading": "Carregando...",
+  "@loading": {
+    "description": "Mensagem de carregamento"
+  }
+}
