@@ -16,8 +16,204 @@
     "description": "Button to create new note"
   },
 
+  "addNote": "Add Note",
+  "@addNote": {
+    "description": "Add note screen title"
+  },
+
+  "editNote": "Edit Note",
+  "@editNote": {
+    "description": "Edit note screen title"
+  },
+
+  "viewNote": "View Note",
+  "@viewNote": {
+    "description": "View note screen title"
+  },
+
+  "noteTitle": "Title",
+  "@noteTitle": {
+    "description": "Title field label"
+  },
+
+  "noteContent": "Content",
+  "@noteContent": {
+    "description": "Content field label"
+  },
+
+  "selectColor": "Select Color",
+  "@selectColor": {
+    "description": "Color selection label"
+  },
+
+  "titleRequired": "Title is required",
+  "@titleRequired": {
+    "description": "Title validation message"
+  },
+
+  "contentRequired": "Content is required",
+  "@contentRequired": {
+    "description": "Content validation message"
+  },
+
+  "titleHint": "Enter note title",
+  "@titleHint": {
+    "description": "Title field hint"
+  },
+
+  "contentHint": "Enter note content",
+  "@contentHint": {
+    "description": "Content field hint"
+  },
+
+  "save": "Save",
+  "@save": {
+    "description": "Save button"
+  },
+
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button"
+  },
+
+  "edit": "Edit",
+  "@edit": {
+    "description": "Edit button"
+  },
+
+  "yes": "Yes",
+  "@yes": {
+    "description": "Yes confirmation"
+  },
+
+  "no": "No",
+  "@no": {
+    "description": "No confirmation"
+  },
+
+  "search": "Search",
+  "@search": {
+    "description": "Search button"
+  },
+
+  "searchNotes": "Search notes...",
+  "@searchNotes": {
+    "description": "Search field hint"
+  },
+
+  "noNotes": "No notes found",
+  "@noNotes": {
+    "description": "Message when there are no notes"
+  },
+
+  "createFirstNote": "Create your first note",
+  "@createFirstNote": {
+    "description": "Encouragement message to create first note"
+  },
+
+  "noSearchResults": "No results found",
+  "@noSearchResults": {
+    "description": "Message when search returns no results"
+  },
+
+  "deleteNoteTitle": "Delete Note?",
+  "@deleteNoteTitle": {
+    "description": "Delete confirmation dialog title"
+  },
+
+  "deleteNoteMessage": "This action cannot be undone",
+  "@deleteNoteMessage": {
+    "description": "Delete confirmation dialog message"
+  },
+
+  "noteDeleted": "Note deleted",
+  "@noteDeleted": {
+    "description": "Success message when note is deleted"
+  },
+
+  "noteSaved": "Note saved",
+  "@noteSaved": {
+    "description": "Success message when note is saved"
+  },
+
+  "noteUpdated": "Note updated",
+  "@noteUpdated": {
+    "description": "Success message when note is updated"
+  },
+
+  "errorTitle": "Error",
+  "@errorTitle": {
+    "description": "Error dialog title"
+  },
+
+  "errorLoadingNotes": "Error loading notes",
+  "@errorLoadingNotes": {
+    "description": "Error message when loading notes fails"
+  },
+
+  "errorSavingNote": "Error saving note",
+  "@errorSavingNote": {
+    "description": "Error message when saving note fails"
+  },
+
+  "errorDeletingNote": "Error deleting note",
+  "@errorDeletingNote": {
+    "description": "Error message when deleting note fails"
+  },
+
+  "tryAgain": "Try again",
+  "@tryAgain": {
+    "description": "Button to try again"
+  },
+
   "loading": "Loading...",
   "@loading": {
     "description": "Loading message"
+  },
+
+  "today": "Today",
+  "@today": {
+    "description": "Word 'today' for dates"
+  },
+
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": "Word 'yesterday' for dates"
+  },
+
+  "daysAgo": "{count} days ago",
+  "@daysAgo": {
+    "description": "Days ago format",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+
+  "createdAt": "Created at",
+  "@createdAt": {
+    "description": "Creation date label"
+  },
+
+  "updatedAt": "Updated at",
+  "@updatedAt": {
+    "description": "Update date label"
+  },
+
+  "noteCount": "{count} {count, plural, =0{notes} =1{note} other{notes}}",
+  "@noteCount": {
+    "description": "Note counter with plural",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   }
 }

@@ -116,11 +116,233 @@ abstract class AppLocalizations {
   /// **'Nova Nota'**
   String get newNote;
 
+  /// Título da tela de adicionar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Adicionar Nota'**
+  String get addNote;
+
+  /// Título da tela de editar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar Nota'**
+  String get editNote;
+
+  /// Título da tela de visualizar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver Nota'**
+  String get viewNote;
+
+  /// Label do campo título
+  ///
+  /// In pt, this message translates to:
+  /// **'Título'**
+  String get noteTitle;
+
+  /// Label do campo conteúdo
+  ///
+  /// In pt, this message translates to:
+  /// **'Conteúdo'**
+  String get noteContent;
+
+  /// Label para seleção de cor
+  ///
+  /// In pt, this message translates to:
+  /// **'Selecionar Cor'**
+  String get selectColor;
+
+  /// Mensagem de validação do título
+  ///
+  /// In pt, this message translates to:
+  /// **'Título é obrigatório'**
+  String get titleRequired;
+
+  /// Mensagem de validação do conteúdo
+  ///
+  /// In pt, this message translates to:
+  /// **'Conteúdo é obrigatório'**
+  String get contentRequired;
+
+  /// Dica do campo título
+  ///
+  /// In pt, this message translates to:
+  /// **'Digite o título da nota'**
+  String get titleHint;
+
+  /// Dica do campo conteúdo
+  ///
+  /// In pt, this message translates to:
+  /// **'Digite o conteúdo da nota'**
+  String get contentHint;
+
+  /// Botão salvar
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar'**
+  String get save;
+
+  /// Botão cancelar
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get cancel;
+
+  /// Botão excluir
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir'**
+  String get delete;
+
+  /// Botão editar
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar'**
+  String get edit;
+
+  /// Confirmação sim
+  ///
+  /// In pt, this message translates to:
+  /// **'Sim'**
+  String get yes;
+
+  /// Confirmação não
+  ///
+  /// In pt, this message translates to:
+  /// **'Não'**
+  String get no;
+
+  /// Botão buscar
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar'**
+  String get search;
+
+  /// Hint do campo de busca
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar notas...'**
+  String get searchNotes;
+
+  /// Mensagem quando não há notas
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma nota encontrada'**
+  String get noNotes;
+
+  /// Mensagem de incentivo para criar primeira nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Crie sua primeira nota'**
+  String get createFirstNote;
+
+  /// Mensagem quando busca não retorna resultados
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum resultado encontrado'**
+  String get noSearchResults;
+
+  /// Título do diálogo de confirmação de exclusão
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir Nota?'**
+  String get deleteNoteTitle;
+
+  /// Mensagem do diálogo de confirmação de exclusão
+  ///
+  /// In pt, this message translates to:
+  /// **'Esta ação não pode ser desfeita'**
+  String get deleteNoteMessage;
+
+  /// Mensagem de sucesso ao excluir nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Nota excluída'**
+  String get noteDeleted;
+
+  /// Mensagem de sucesso ao salvar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Nota salva'**
+  String get noteSaved;
+
+  /// Mensagem de sucesso ao atualizar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Nota atualizada'**
+  String get noteUpdated;
+
+  /// Título de diálogo de erro
+  ///
+  /// In pt, this message translates to:
+  /// **'Erro'**
+  String get errorTitle;
+
+  /// Mensagem de erro ao carregar notas
+  ///
+  /// In pt, this message translates to:
+  /// **'Erro ao carregar notas'**
+  String get errorLoadingNotes;
+
+  /// Mensagem de erro ao salvar nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Erro ao salvar nota'**
+  String get errorSavingNote;
+
+  /// Mensagem de erro ao excluir nota
+  ///
+  /// In pt, this message translates to:
+  /// **'Erro ao excluir nota'**
+  String get errorDeletingNote;
+
+  /// Botão para tentar novamente
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar novamente'**
+  String get tryAgain;
+
   /// Mensagem de carregamento
   ///
   /// In pt, this message translates to:
   /// **'Carregando...'**
   String get loading;
+
+  /// Palavra 'hoje' para datas
+  ///
+  /// In pt, this message translates to:
+  /// **'Hoje'**
+  String get today;
+
+  /// Palavra 'ontem' para datas
+  ///
+  /// In pt, this message translates to:
+  /// **'Ontem'**
+  String get yesterday;
+
+  /// Formato de dias atrás
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} dias atrás'**
+  String daysAgo(int count);
+
+  /// Label de data de criação
+  ///
+  /// In pt, this message translates to:
+  /// **'Criado em'**
+  String get createdAt;
+
+  /// Label de data de atualização
+  ///
+  /// In pt, this message translates to:
+  /// **'Atualizado em'**
+  String get updatedAt;
+
+  /// Contador de notas com plural
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} {count, plural, =0{notas} =1{nota} other{notas}}'**
+  String noteCount(int count);
 }
 
 class _AppLocalizationsDelegate

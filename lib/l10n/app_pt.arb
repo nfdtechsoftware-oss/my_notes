@@ -16,8 +16,204 @@
     "description": "Botão para criar nova nota"
   },
 
+  "addNote": "Adicionar Nota",
+  "@addNote": {
+    "description": "Título da tela de adicionar nota"
+  },
+
+  "editNote": "Editar Nota",
+  "@editNote": {
+    "description": "Título da tela de editar nota"
+  },
+
+  "viewNote": "Ver Nota",
+  "@viewNote": {
+    "description": "Título da tela de visualizar nota"
+  },
+
+  "noteTitle": "Título",
+  "@noteTitle": {
+    "description": "Label do campo título"
+  },
+
+  "noteContent": "Conteúdo",
+  "@noteContent": {
+    "description": "Label do campo conteúdo"
+  },
+
+  "selectColor": "Selecionar Cor",
+  "@selectColor": {
+    "description": "Label para seleção de cor"
+  },
+
+  "titleRequired": "Título é obrigatório",
+  "@titleRequired": {
+    "description": "Mensagem de validação do título"
+  },
+
+  "contentRequired": "Conteúdo é obrigatório",
+  "@contentRequired": {
+    "description": "Mensagem de validação do conteúdo"
+  },
+
+  "titleHint": "Digite o título da nota",
+  "@titleHint": {
+    "description": "Dica do campo título"
+  },
+
+  "contentHint": "Digite o conteúdo da nota",
+  "@contentHint": {
+    "description": "Dica do campo conteúdo"
+  },
+
+  "save": "Salvar",
+  "@save": {
+    "description": "Botão salvar"
+  },
+
+  "cancel": "Cancelar",
+  "@cancel": {
+    "description": "Botão cancelar"
+  },
+
+  "delete": "Excluir",
+  "@delete": {
+    "description": "Botão excluir"
+  },
+
+  "edit": "Editar",
+  "@edit": {
+    "description": "Botão editar"
+  },
+
+  "yes": "Sim",
+  "@yes": {
+    "description": "Confirmação sim"
+  },
+
+  "no": "Não",
+  "@no": {
+    "description": "Confirmação não"
+  },
+
+  "search": "Buscar",
+  "@search": {
+    "description": "Botão buscar"
+  },
+
+  "searchNotes": "Buscar notas...",
+  "@searchNotes": {
+    "description": "Hint do campo de busca"
+  },
+
+  "noNotes": "Nenhuma nota encontrada",
+  "@noNotes": {
+    "description": "Mensagem quando não há notas"
+  },
+
+  "createFirstNote": "Crie sua primeira nota",
+  "@createFirstNote": {
+    "description": "Mensagem de incentivo para criar primeira nota"
+  },
+
+  "noSearchResults": "Nenhum resultado encontrado",
+  "@noSearchResults": {
+    "description": "Mensagem quando busca não retorna resultados"
+  },
+
+  "deleteNoteTitle": "Excluir Nota?",
+  "@deleteNoteTitle": {
+    "description": "Título do diálogo de confirmação de exclusão"
+  },
+
+  "deleteNoteMessage": "Esta ação não pode ser desfeita",
+  "@deleteNoteMessage": {
+    "description": "Mensagem do diálogo de confirmação de exclusão"
+  },
+
+  "noteDeleted": "Nota excluída",
+  "@noteDeleted": {
+    "description": "Mensagem de sucesso ao excluir nota"
+  },
+
+  "noteSaved": "Nota salva",
+  "@noteSaved": {
+    "description": "Mensagem de sucesso ao salvar nota"
+  },
+
+  "noteUpdated": "Nota atualizada",
+  "@noteUpdated": {
+    "description": "Mensagem de sucesso ao atualizar nota"
+  },
+
+  "errorTitle": "Erro",
+  "@errorTitle": {
+    "description": "Título de diálogo de erro"
+  },
+
+  "errorLoadingNotes": "Erro ao carregar notas",
+  "@errorLoadingNotes": {
+    "description": "Mensagem de erro ao carregar notas"
+  },
+
+  "errorSavingNote": "Erro ao salvar nota",
+  "@errorSavingNote": {
+    "description": "Mensagem de erro ao salvar nota"
+  },
+
+  "errorDeletingNote": "Erro ao excluir nota",
+  "@errorDeletingNote": {
+    "description": "Mensagem de erro ao excluir nota"
+  },
+
+  "tryAgain": "Tentar novamente",
+  "@tryAgain": {
+    "description": "Botão para tentar novamente"
+  },
+
   "loading": "Carregando...",
   "@loading": {
     "description": "Mensagem de carregamento"
+  },
+
+  "today": "Hoje",
+  "@today": {
+    "description": "Palavra 'hoje' para datas"
+  },
+
+  "yesterday": "Ontem",
+  "@yesterday": {
+    "description": "Palavra 'ontem' para datas"
+  },
+
+  "daysAgo": "{count} dias atrás",
+  "@daysAgo": {
+    "description": "Formato de dias atrás",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+
+  "createdAt": "Criado em",
+  "@createdAt": {
+    "description": "Label de data de criação"
+  },
+
+  "updatedAt": "Atualizado em",
+  "@updatedAt": {
+    "description": "Label de data de atualização"
+  },
+
+  "noteCount": "{count} {count, plural, =0{notas} =1{nota} other{notas}}",
+  "@noteCount": {
+    "description": "Contador de notas com plural",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   }
 }
