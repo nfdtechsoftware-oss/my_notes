@@ -10,7 +10,8 @@
       "Bash(flutter pub get)",
       "Bash(flutter gen-l10n)",
       "Bash(dir \".dart_tool\\flutter_gen\\gen_l10n\")",
-      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''lib\\core\\config''\")"
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''lib\\core\\config''\")",
+      "WebFetch(domain:nfdtechsoftware-oss.github.io)"
     ],
     "deny": [],
     "ask": []

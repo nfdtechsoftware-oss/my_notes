@@ -51,3 +51,10 @@ app.*.map.json
 
 # Migration documentation (internal use only)
 .migration/
+
+# Sensitive Android signing files
+android/key.properties
+android/*.jks
+android/*.keystore
+android/app/*.jks
+android/app/*.keystore
