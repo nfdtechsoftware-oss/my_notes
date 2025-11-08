@@ -102,9 +102,10 @@ class _AddEditScreenState extends ConsumerState<AddEditScreen> {
                 child: TextFormField(
                   controller: _titleController,
                   autofocus: !isEditing,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
                   decoration: InputDecoration(
                     labelText: l10n.noteTitle,
@@ -145,9 +146,10 @@ class _AddEditScreenState extends ConsumerState<AddEditScreen> {
                 ),
                 child: TextFormField(
                   controller: _contentController,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     height: 1.5,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
                   decoration: InputDecoration(
                     labelText: l10n.noteContent,

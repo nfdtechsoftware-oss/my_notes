@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../l10n/app_localizations.dart';
 import '../model/notes_model.dart';
 import '../utils/date_utils.dart';
+import '../core/theme/app_theme.dart';
 
 class NoteCard extends StatelessWidget {
   final Note note;
@@ -22,10 +23,9 @@ class NoteCard extends StatelessWidget {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
 
-    // Determine if the color is dark to adjust text contrast
-    final isLightColor = note.color.computeLuminance() > 0.7;
-    final textColor = isLightColor ? Colors.black87 : Colors.white;
-    final subtitleColor = isLightColor ? Colors.black54 : Colors.white70;
+    // Use AppTheme function for better text contrast
+    final textColor = AppTheme.getContrastingTextColor(note.color);
+    final subtitleColor = textColor.withValues(alpha: 0.7);
 
     return Card(
       clipBehavior: Clip.antiAlias,
@@ -167,8 +167,8 @@ class CompactNoteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isLightColor = note.color.computeLuminance() > 0.7;
-    final textColor = isLightColor ? Colors.black87 : Colors.white;
+    final textColor = AppTheme.getContrastingTextColor(note.color);
+    final subtitleColor = textColor.withValues(alpha: 0.7);
 
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -187,7 +187,7 @@ class CompactNoteCard extends StatelessWidget {
         subtitle: Text(
           note.content,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: isLightColor ? Colors.black54 : Colors.white70,
+            color: subtitleColor,
           ),
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
@@ -198,7 +198,7 @@ class CompactNoteCard extends StatelessWidget {
             note.dateTime.toIso8601String(),
           ),
           style: theme.textTheme.bodySmall?.copyWith(
-            color: isLightColor ? Colors.black54 : Colors.white70,
+            color: subtitleColor,
           ),
         ),
       ),

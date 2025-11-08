@@ -144,4 +144,37 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get goHome => 'Go Home';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get languageDescription => 'Select app language';
+
+  @override
+  String get systemDefault => 'System default';
+
+  @override
+  String get portuguese => 'Português';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get appearance => 'Appearance';
+
+  @override
+  String get theme => 'Theme';
+
+  @override
+  String get lightTheme => 'Light';
+
+  @override
+  String get darkTheme => 'Dark';
+
+  @override
+  String get systemTheme => 'System';
 }

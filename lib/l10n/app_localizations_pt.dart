@@ -144,4 +144,37 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get goHome => 'Ir para o Início';
+
+  @override
+  String get settings => 'Configurações';
+
+  @override
+  String get language => 'Idioma';
+
+  @override
+  String get languageDescription => 'Selecione o idioma do aplicativo';
+
+  @override
+  String get systemDefault => 'Padrão do sistema';
+
+  @override
+  String get portuguese => 'Português';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get appearance => 'Aparência';
+
+  @override
+  String get theme => 'Tema';
+
+  @override
+  String get lightTheme => 'Claro';
+
+  @override
+  String get darkTheme => 'Escuro';
+
+  @override
+  String get systemTheme => 'Sistema';
 }

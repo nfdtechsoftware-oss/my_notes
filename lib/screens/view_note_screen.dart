@@ -5,6 +5,7 @@ import '../l10n/app_localizations.dart';
 import '../model/notes_model.dart';
 import '../providers/notes_provider.dart';
 import '../utils/date_utils.dart';
+import '../core/theme/app_theme.dart';
 
 class ViewNoteScreen extends ConsumerWidget {
   final Note note;
@@ -14,7 +15,11 @@ class ViewNoteScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
     final color = note.color;
+
+    // Use contrasting text color based on note color luminance
+    final textColor = AppTheme.getContrastingTextColor(color);
 
     return Scaffold(
       backgroundColor: color,
@@ -23,17 +28,17 @@ class ViewNoteScreen extends ConsumerWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () => context.pop(),
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
+          icon: Icon(Icons.arrow_back_ios_new, color: textColor),
         ),
         actions: [
           IconButton(
             onPressed: () => context.push('/edit/${note.id}', extra: note),
-            icon: const Icon(Icons.edit, color: Colors.white),
+            icon: Icon(Icons.edit, color: textColor),
             tooltip: l10n.edit,
           ),
           IconButton(
             onPressed: () => _showDeleteDialog(context, ref, l10n),
-            icon: const Icon(Icons.delete, color: Colors.white),
+            icon: Icon(Icons.delete, color: textColor),
             tooltip: l10n.delete,
           ),
           const SizedBox(width: 8),
@@ -50,19 +55,19 @@ class ViewNoteScreen extends ConsumerWidget {
                 children: [
                   Text(
                     note.title,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: textColor,
                     ),
                   ),
                   const SizedBox(height: 12),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.access_time,
                         size: 16,
-                        color: Colors.white,
+                        color: textColor,
                       ),
                       const SizedBox(width: 8),
                       Text(
@@ -70,10 +75,10 @@ class ViewNoteScreen extends ConsumerWidget {
                           context,
                           note.dateTime.toIso8601String(),
                         ),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                          color: textColor,
                         ),
                       ),
                     ],
@@ -85,9 +90,9 @@ class ViewNoteScreen extends ConsumerWidget {
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.fromLTRB(24, 32, 24, 24),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.surface,
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(32),
                     topRight: Radius.circular(32),
                   ),
@@ -98,7 +103,7 @@ class ViewNoteScreen extends ConsumerWidget {
                     note.content,
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.black.withValues(alpha: 0.8),
+                      color: theme.colorScheme.onSurface,
                       height: 1.6,
                       letterSpacing: 0.2,
                     ),
@@ -117,6 +122,7 @@ class ViewNoteScreen extends ConsumerWidget {
     WidgetRef ref,
     AppLocalizations l10n,
   ) async {
+    final theme = Theme.of(context);
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -129,7 +135,10 @@ class ViewNoteScreen extends ConsumerWidget {
         ),
         content: Text(
           l10n.deleteNoteMessage,
-          style: const TextStyle(color: Colors.black54, fontSize: 16),
+          style: TextStyle(
+            color: theme.colorScheme.onSurfaceVariant,
+            fontSize: 16,
+          ),
         ),
         actions: [
           TextButton(
@@ -137,7 +146,7 @@ class ViewNoteScreen extends ConsumerWidget {
             child: Text(
               l10n.cancel,
               style: TextStyle(
-                color: Colors.grey[600],
+                color: theme.colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.w600,
               ),
             ),

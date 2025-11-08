@@ -349,6 +349,72 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ir para o Início'**
   String get goHome;
+
+  /// Título da tela de configurações
+  ///
+  /// In pt, this message translates to:
+  /// **'Configurações'**
+  String get settings;
+
+  /// Label para seleção de idioma
+  ///
+  /// In pt, this message translates to:
+  /// **'Idioma'**
+  String get language;
+
+  /// Descrição da opção de idioma
+  ///
+  /// In pt, this message translates to:
+  /// **'Selecione o idioma do aplicativo'**
+  String get languageDescription;
+
+  /// Opção para usar idioma do sistema
+  ///
+  /// In pt, this message translates to:
+  /// **'Padrão do sistema'**
+  String get systemDefault;
+
+  /// Nome do idioma português
+  ///
+  /// In pt, this message translates to:
+  /// **'Português'**
+  String get portuguese;
+
+  /// Nome do idioma inglês
+  ///
+  /// In pt, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// Seção de aparência
+  ///
+  /// In pt, this message translates to:
+  /// **'Aparência'**
+  String get appearance;
+
+  /// Label para seleção de tema
+  ///
+  /// In pt, this message translates to:
+  /// **'Tema'**
+  String get theme;
+
+  /// Tema claro
+  ///
+  /// In pt, this message translates to:
+  /// **'Claro'**
+  String get lightTheme;
+
+  /// Tema escuro
+  ///
+  /// In pt, this message translates to:
+  /// **'Escuro'**
+  String get darkTheme;
+
+  /// Usar tema do sistema
+  ///
+  /// In pt, this message translates to:
+  /// **'Sistema'**
+  String get systemTheme;
 }
 
 class _AppLocalizationsDelegate

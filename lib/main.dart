@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -6,14 +7,38 @@ import 'core/config/env_config.dart';
 import 'core/theme/app_theme.dart';
 import 'l10n/app_localizations.dart';
 import 'model/notes_model.dart';
+import 'providers/locale_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/add_edit_screen.dart';
 import 'screens/view_note_screen.dart';
+import 'screens/settings_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await EnvConfig.load();
+
+  // Configure system UI overlay (status bar and navigation bar)
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark, // Icons dark for light theme
+      statusBarBrightness: Brightness.light, // For iOS
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
+
+  // Enable edge-to-edge mode
+  SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.edgeToEdge,
+  );
+
+  // Force portrait orientation only
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
 
   runApp(
     const ProviderScope(
@@ -22,17 +47,19 @@ void main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedLocale = ref.watch(localeProvider);
+
     return MaterialApp.router(
       title: EnvConfig.appName,
       debugShowCheckedModeBanner: false,
 
       // Localization
-      locale: const Locale('pt', 'BR'), // Define português como padrão
+      locale: selectedLocale, // Use selected locale or system default
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -85,6 +112,10 @@ final _router = GoRouter(
         }
         return ViewNoteScreen(note: note);
       },
+    ),
+    GoRoute(
+      path: '/settings',
+      builder: (context, state) => const SettingsScreen(),
     ),
   ],
   errorBuilder: (context, state) => const _ErrorPage(),

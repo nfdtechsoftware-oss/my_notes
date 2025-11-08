@@ -220,5 +220,60 @@
   "goHome": "Ir para o Início",
   "@goHome": {
     "description": "Botão para voltar à tela inicial"
+  },
+
+  "settings": "Configurações",
+  "@settings": {
+    "description": "Título da tela de configurações"
+  },
+
+  "language": "Idioma",
+  "@language": {
+    "description": "Label para seleção de idioma"
+  },
+
+  "languageDescription": "Selecione o idioma do aplicativo",
+  "@languageDescription": {
+    "description": "Descrição da opção de idioma"
+  },
+
+  "systemDefault": "Padrão do sistema",
+  "@systemDefault": {
+    "description": "Opção para usar idioma do sistema"
+  },
+
+  "portuguese": "Português",
+  "@portuguese": {
+    "description": "Nome do idioma português"
+  },
+
+  "english": "English",
+  "@english": {
+    "description": "Nome do idioma inglês"
+  },
+
+  "appearance": "Aparência",
+  "@appearance": {
+    "description": "Seção de aparência"
+  },
+
+  "theme": "Tema",
+  "@theme": {
+    "description": "Label para seleção de tema"
+  },
+
+  "lightTheme": "Claro",
+  "@lightTheme": {
+    "description": "Tema claro"
+  },
+
+  "darkTheme": "Escuro",
+  "@darkTheme": {
+    "description": "Tema escuro"
+  },
+
+  "systemTheme": "Sistema",
+  "@systemTheme": {
+    "description": "Usar tema do sistema"
   }
 }

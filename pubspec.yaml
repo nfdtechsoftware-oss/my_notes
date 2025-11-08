@@ -2,7 +2,7 @@ name: my_notes
 description: "A modern notes application with multi-language support and clean architecture."
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.1+4
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
@@ -40,6 +40,7 @@ dependencies:
 
   # Utilities
   path: ^1.9.0
+  shared_preferences: ^2.3.4
 
   # Environment Variables
   flutter_dotenv: ^6.0.0

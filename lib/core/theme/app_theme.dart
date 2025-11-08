@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
@@ -25,6 +26,7 @@ class AppTheme {
         surfaceTintColor: colorScheme.surfaceTint,
         elevation: 0,
         scrolledUnderElevation: 3,
+        systemOverlayStyle: getSystemUiOverlayStyle(Brightness.light),
         titleTextStyle: TextStyle(
           fontSize: 22,
           fontWeight: FontWeight.w600,
@@ -178,6 +180,7 @@ class AppTheme {
         surfaceTintColor: colorScheme.surfaceTint,
         elevation: 0,
         scrolledUnderElevation: 3,
+        systemOverlayStyle: getSystemUiOverlayStyle(Brightness.dark),
         titleTextStyle: TextStyle(
           fontSize: 22,
           fontWeight: FontWeight.w600,
@@ -343,5 +346,26 @@ class AppTheme {
   // Função para obter cor de texto baseada na cor de fundo
   static Color getContrastingTextColor(Color backgroundColor) {
     return isLightColor(backgroundColor) ? Colors.black87 : Colors.white;
+  }
+
+  // Função para obter SystemUiOverlayStyle baseado no tema
+  static SystemUiOverlayStyle getSystemUiOverlayStyle(Brightness brightness) {
+    if (brightness == Brightness.light) {
+      return const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.dark,
+      );
+    } else {
+      return const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
+      );
+    }
   }
 }

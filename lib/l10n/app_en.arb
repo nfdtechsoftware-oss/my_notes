@@ -220,5 +220,60 @@
   "goHome": "Go Home",
   "@goHome": {
     "description": "Button to go back to home screen"
+  },
+
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings screen title"
+  },
+
+  "language": "Language",
+  "@language": {
+    "description": "Language selection label"
+  },
+
+  "languageDescription": "Select app language",
+  "@languageDescription": {
+    "description": "Language option description"
+  },
+
+  "systemDefault": "System default",
+  "@systemDefault": {
+    "description": "Option to use system language"
+  },
+
+  "portuguese": "Português",
+  "@portuguese": {
+    "description": "Portuguese language name"
+  },
+
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+
+  "appearance": "Appearance",
+  "@appearance": {
+    "description": "Appearance section"
+  },
+
+  "theme": "Theme",
+  "@theme": {
+    "description": "Theme selection label"
+  },
+
+  "lightTheme": "Light",
+  "@lightTheme": {
+    "description": "Light theme"
+  },
+
+  "darkTheme": "Dark",
+  "@darkTheme": {
+    "description": "Dark theme"
+  },
+
+  "systemTheme": "System",
+  "@systemTheme": {
+    "description": "Use system theme"
   }
 }

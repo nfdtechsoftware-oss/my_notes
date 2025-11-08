@@ -58,6 +58,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
           ),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            tooltip: l10n.settings,
+            onPressed: () => context.push('/settings'),
+          ),
+        ],
       ),
       body: notesAsync.when(
         loading: () => Center(
